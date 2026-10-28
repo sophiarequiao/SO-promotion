@@ -10,7 +10,6 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-
 header{
     font-family: "Cinzel", serif;
     color: #ffffff;
@@ -22,39 +21,60 @@ h1{
     justify-content: space-between;
     width: 100vw;
     height: 100vh;
+    span{
+        padding: 100px;
+        font-size: 80px;
+        font-weight:bolder
+    }
+    .header-text-2{
+        align-self: center;
+        justify-self: center;
+    }
+    .header-text-3{
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
 }
-span{
-    padding: 100px;
-    font-size: 80px;
-    font-weight:bolder
-}
-.header-text-2{
-    align-self: center;
-    justify-self: center;
-}
-.header-text-3{
-    align-self: flex-end;
-    justify-self: flex-end;
-}
-
 section{
     padding: 40px; 
+    color: #85ae72;
     background: rgba(100, 76, 84, 0.39);
     border-radius: 50px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
     -webkit-backdrop-filter: blur(8.8px);
     margin: 30px 0px;
+
+    h2{
+        font-size: 64px;
+    }
+    h3{
+        font-size: 36px;
+    }
+    p{
+        font-size: 25px;
+        margin: 20px 0px;
+    }
+    ul{
+        margin: 20px 0px;
+    }
+    .respuesta{
+        margin: 20px 0px 0px 20px;
+    }
     .timeline-part-left,.timeline-part-right, 
     .timeline-part-left-first, .timeline-part-right-last{
         position: relative;
         padding:20px 0px;
         display: flex;
         h3{
-            font-size: 36px;
+            font-family: "Cinzel", serif;
             margin:20px;
             align-self: center;
-            font-weight: bold;
+            font-weight: 700;
+            border: rgb(76, 56, 63) solid;
+            border-radius: 30px;
+            padding:10px;
+            background-color: rgba(100, 76, 84, 0.39);;
         }
         div{
             padding: 20px;
@@ -63,7 +83,7 @@ section{
                 font-size: 30px;
             }
             p{
-                font-size: 20px;
+                font-size: 25px;
                 align-self: center;
                 text-align: justify;
             }
@@ -74,17 +94,17 @@ section{
             margin: 20px;
             align-self: center;
             justify-self: center;
+            position: relative;
+            transition: all 0.8s ease 0s;
         }
     }
-    
-
     .timeline-part-left-first::before {
         content: "";
         position: absolute;
         top: 49%;
         bottom: 0;
         width: 6px;
-        background-color: red;
+        background-color: white;
         left: 0;
     }
     .timeline-part-right-last::before {
@@ -93,25 +113,38 @@ section{
         bottom:49%;
         top: 0;
         width: 6px;
-        background-color: red;
+        background-color: white;
         right: 0;
     }
-
-    .timeline-part-left-first{
-        border-bottom: red solid 6px;
+    .timeline-part-left-first, .timeline-part-left, .timeline-part-right {
+        border-bottom: white solid 6px;
+    }
+    .timeline-part-left-first {
+        img:hover{
+                z-index: 1;
+                transform: scale(1.5) translate(-100px, 0px);
+            }
     }
     .timeline-part-left{
-        border-left: red solid 6px;
-        border-bottom: red solid 6px;
-    }
-    
+        border-left: white solid 6px;
+        img:hover{
+            z-index: 1;
+            transform: scale(1.5) translate(-100px, 0px);
+        }
+    }    
     .timeline-part-right{
-        border-right: red solid 6px;
-        border-bottom:  red solid 6px;
-
+        border-right: white solid 6px;
+        img:hover{
+            z-index: 1;
+            transform: scale(1.5) translate(100px, 0px);
+        }
     }
-
-
+    .timeline-part-right-last{
+        img:hover{
+            z-index: 1;
+            transform: scale(1.5) translate(100px, 0px);
+        }
+    }
     .timeline-part-left::after {
         content: "";
         position: absolute;
@@ -120,10 +153,9 @@ section{
         transform: translateY(-50%);
         width: 25px;
         height: 25px;
-        background: green;
+        background: #b53428;
         border-radius: 50%;
     }
-
     .timeline-part-left-first::after{
         content: "";
         position: absolute;
@@ -132,10 +164,9 @@ section{
         transform: translateY(-50%);
         width: 25px;
         height: 25px;
-        background: green;
+        background: #b53428 ;
         border-radius: 50%;
     }
-
     .timeline-part-right::after {
         content: "";
         position: absolute;
@@ -144,8 +175,9 @@ section{
         transform: translateY(-50%);
         width: 25px;
         height: 25px;
-        background: green;
+        background: #b53428;
         border-radius: 50%;
+    
     }
     .timeline-part-right-last::after{
         content: "";
@@ -155,7 +187,7 @@ section{
         transform: translateY(-50%);
         width: 25px;
         height: 25px;
-        background: green;
+        background:#85ae72;
         border-radius: 50%;
     }
 }
